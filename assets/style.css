@@ -1,0 +1,206 @@
+ /* Estilos generales*/
+
+ body,
+ html {
+     height: 100%;
+     margin: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-family: "Poppins", sans-serif;
+     font-weight: 400;
+ }
+
+ p {
+     font-family: "Montserrat", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 400;
+ }
+
+ h1 {
+     font-family: "Berkshire Swash", serif;
+     font-weight: 400;
+     color: #f4c542;
+ }
+
+ h2 {
+     font-family: "Kanit", sans-serif;
+     font-weight: 300;
+     color: rgb(255, 136, 0);
+
+ }
+
+
+
+ /* Estilo para el formulario */
+ form {
+     padding: 25px;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     background-color: #ffffff;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Estilos para la pantalla de carga */
+ #pantallaCarga {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgb(0, 0, 0);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 2;
+ }
+
+ /* Estilos para el círculo de carga */
+ .loader {
+     border: 8px solid #f8deff;
+     border-radius: 50%;
+     border-top: 8px solid #f58be3;
+     width: 60px;
+     height: 60px;
+     animation: spin 3s linear infinite;
+ }
+
+ /* Animación del círculo de carga */
+ @keyframes spin {
+     0% {
+         transform: rotate(0deg);
+     }
+
+
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+
+ /* Estilos para la pantalla intermedia */
+ #pantallaIntermedia {
+     display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-image: url(https://mega981.com.ar//wp-content/uploads/2022/08/Foto-Koino-2--scaled.jpg);
+     background-repeat: no-repeat;
+     background-size: cover; 
+     color: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 1;
+     text-align: center;
+ }
+
+ .pantallaIntermedia {
+
+     background-color: white;
+     border-radius: 25px;
+     padding: 20px;
+     border: 2px solid #ccc;
+     z-index: 3;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+     color: black;
+ }
+
+ .botoncito {
+     border-radius: 25px;
+     background-color: rgb(230, 174, 141);
+     padding: 10px;
+     margin: 5px;
+     border: none;
+     transition: background-color 0.3s ease, transform 0.3s ease;
+ }
+
+ .botoncito:hover {
+     background-color: rgb(236, 193, 113);
+     transform: scale(1.1);
+     /* Aumenta el tamaño en un 10% */
+ }
+
+.input {
+    padding: 5px;
+    border: none; 
+    border-bottom: 1px solid #f4c542; 
+ }
+
+
+
+ .styled-input {
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #f4c542; 
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+    font-size: 16px; 
+    color: #333; 
+    width: 100%; 
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease; 
+}
+
+.styled-input:focus {
+    border-color: #dd5037; 
+    outline: none; 
+}
+
+
+
+ /* Ocultar la pantalla real al cargar */
+ #pantallaReal {
+     display: none;
+ }
+
+ /* Estilos para el pop-up */
+ #popup {
+     display: none;
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     background-color: white;
+     border-radius: 25px;
+     padding: 20px;
+     border: 2px solid #ccc;
+     z-index: 3;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+     /* Animación de flotación */
+     animation: flotar 3s ease-in-out infinite;
+ }
+
+ @keyframes flotar {
+     0% {
+         transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
+     }
+
+     50% {
+         transform: translate(-50%, -50%) translateY(-10px) rotate(-1deg);
+     }
+
+     100% {
+         transform: translate(-50%, -50%) translateY(0px) rotate(0deg);
+     }
+ }
+
+ /* Estilos para el overlay que bloquea el scroll */
+ #overlay {
+     display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(255, 0, 0, 0.7);
+     z-index: 2;
+ }
+
+ .bg{
+    background-color: #f4c5425b;
+
+   
+ }
