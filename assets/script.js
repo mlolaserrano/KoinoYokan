@@ -24,7 +24,7 @@ function validarFormulario(event) {
 
     // Validación del checkbox
     if (!checkbox) {
-        alert("Debes aceptar dejar propina.");
+        alert("Debes dejar propina.");
         return false;
     }
 
