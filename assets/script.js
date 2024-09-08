@@ -72,7 +72,6 @@ function mostrarInputNumero() {
     }
 }
 
-
 // Ejercicio 3: Validar la fecha seleccionada
 function validarFecha(fechaSeleccionada) {
     const fechaActual = new Date();
@@ -135,6 +134,7 @@ function cerrarPopup() {
 
 
 // JSON FALTA ULTIMO
+// Mostrar contenido de productos basado en un archivo JSON
 document.addEventListener("DOMContentLoaded", function() {
     fetch('/productos.json')  
       .then(response => response.json())
@@ -166,3 +166,4 @@ document.addEventListener("DOMContentLoaded", function() {
       .catch(error => console.error('Error al cargar el JSON:', error));
 });
 
+// NO ME SALEEEEEEEEEEEEEEEEEEEEEEE EL 3 

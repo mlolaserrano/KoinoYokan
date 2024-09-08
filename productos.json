@@ -1,4 +1,5 @@
-[
+{
+  "productos": [
     {
       "nombre": "Producto 1",
       "descripcion": "Descripción del Producto 1",
@@ -17,6 +18,22 @@
       "stock": 5,
       "precio": 150.0
     }
-    
+  ],
+  "usuarios": [
+    {
+      "usuario": "admin",
+      "contrasena": "admin123",
+      "rol": "administrador"
+    },
+    {
+      "usuario": "creador",
+      "contrasena": "creador123",
+      "rol": "creador de contenido"
+    },
+    {
+      "usuario": "usuario",
+      "contrasena": "usuario123",
+      "rol": "usuario normal"
+    }
   ]
-  
+}

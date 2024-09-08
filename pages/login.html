@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/assets/style2.css">
+</head>
+<body>
+    <nav>
+        <div class="logo-container">
+            <a href="#" class="logo">Koino Yokan</a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Tienda</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor-login">
+        <form id="formulario-login">
+            <h2 class="titulo-login">Iniciar Sesión</h2>
+
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" class="campo-login" required>
+
+            <label for="contraseña">Contraseña</label>
+            <input type="password" id="contraseña" class="campo-login" required>
+
+            <button type="submit" class="botoncito">Ingresar</button>
+            <p id="mensaje-error" class="mensaje-error" style="display:none;">Usuario o contraseña incorrectos.</p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
