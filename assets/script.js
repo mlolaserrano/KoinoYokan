@@ -132,4 +132,37 @@ function cerrarPopup() {
 // Falta por hacer:
 // Ejercicio 5: Activar un evento de scroll que limite el desplazamiento hasta que se acepten las cookies.
 // Componentes COMPLETO
-// JSON COMPLETO
+
+
+// JSON FALTA ULTIMO
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('/productos.json')  
+      .then(response => response.json())
+      .then(productos => {
+        const productosContainer = document.getElementById("productos-container");
+
+        if (productosContainer) {
+          productos.forEach(producto => {
+            if (producto.stock > 0) {
+              const card = document.createElement("div");
+              card.classList.add("card", "col-md-4", "mb-3");  
+
+              card.innerHTML = `
+                <div class="card-body">
+                  <h5 class="card-title">${producto.nombre}</h5>
+                  <p class="card-text">${producto.descripcion}</p>
+                  <p class="card-text">Precio: $${producto.precio}</p>
+                  <p class="card-text">Stock: ${producto.stock}</p>
+                </div>
+              `;
+
+              productosContainer.appendChild(card);
+            }
+          });
+        } else {
+          console.error("El contenedor de productos no existe.");
+        }
+      })
+      .catch(error => console.error('Error al cargar el JSON:', error));
+});
+

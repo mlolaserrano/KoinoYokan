@@ -148,8 +148,6 @@
     outline: none; 
 }
 
-
-
  /* Ocultar la pantalla real al cargar */
  #pantallaReal {
      display: none;
