@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch('/productos.json')  
         .then(response => {  
             if (!response.ok) {  
-                throw new Error('Network response was not ok');  
+                throw new Error('Error');  
             }  
             return response.json();  
         })  
@@ -217,6 +217,9 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.error('Error al cargar el JSON:', error));  
 });  
 
+
+
+
 // JSON: Login 
 
 let usuarios = [];  
@@ -225,7 +228,7 @@ function cargarUsuarios() {
     return fetch('/productos.json')  
         .then(response => {  
             if (!response.ok) {  
-                throw new Error('Error en la carga del archivo JSON');  
+                throw new Error('Sin datos');  
             }  
             return response.json();  
         })  
@@ -274,3 +277,5 @@ cargarUsuarios().then(() => {
         }  
     });  
 });
+
+// BIBLIOGRAFIA: https://developer.mozilla.org/es/docs/Learn/JavaScript/Objects/JSON
