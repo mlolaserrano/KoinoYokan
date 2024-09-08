@@ -128,42 +128,149 @@ function cerrarPopup() {
     document.getElementById("popup").style.display = "none";
 }
 
-// Falta por hacer:
-// Ejercicio 5: Activar un evento de scroll que limite el desplazamiento hasta que se acepten las cookies.
-// Componentes COMPLETO
+document.addEventListener('DOMContentLoaded', function () {
+
+    // Bloquear el scroll cuando la página se carga
+    document.body.style.overflow = 'hidden';
 
 
-// JSON FALTA ULTIMO
-// Mostrar contenido de productos basado en un archivo JSON
-document.addEventListener("DOMContentLoaded", function() {
-    fetch('/productos.json')  
-      .then(response => response.json())
-      .then(productos => {
-        const productosContainer = document.getElementById("productos-container");
+    const botonAceptarCookies = document.getElementById('aceptar-cookies');
+    botonAceptarCookies.addEventListener('click', function () {
+        cookiesAceptadas = true;
 
-        if (productosContainer) {
-          productos.forEach(producto => {
-            if (producto.stock > 0) {
-              const card = document.createElement("div");
-              card.classList.add("card", "col-md-4", "mb-3");  
+        // Habilitar el scroll 
+        document.body.style.overflow = 'auto';
 
-              card.innerHTML = `
-                <div class="card-body">
-                  <h5 class="card-title">${producto.nombre}</h5>
-                  <p class="card-text">${producto.descripcion}</p>
-                  <p class="card-text">Precio: $${producto.precio}</p>
-                  <p class="card-text">Stock: ${producto.stock}</p>
-                </div>
-              `;
-
-              productosContainer.appendChild(card);
-            }
-          });
-        } else {
-          console.error("El contenedor de productos no existe.");
-        }
-      })
-      .catch(error => console.error('Error al cargar el JSON:', error));
+        // Esconder el modal de cookies
+        document.getElementById('cookies-modal').style.display = 'none';
+    });
 });
 
-// NO ME SALEEEEEEEEEEEEEEEEEEEEEEE EL 3 
+
+// Componentes 
+// Menu
+class componenteMenu extends HTMLElement {
+    connectedCallback() {
+      this.innerHTML =
+        `
+    <nav>
+        <div class="logo-container">
+            <a href="/pages/koino.html" class="logo">Koino Jokan</a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#discografia">Discografía</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+        `;
+    }
+  }
+  customElements.define('componente-menu', componenteMenu);
+  
+  // footer
+  class componenteFooter extends HTMLElement {
+    connectedCallback() {
+      this.innerHTML =
+        `
+      // ---------------------> COMPLETAR <---------------------------
+        `;
+    }
+  }
+  customElements.define('componente-footer', componenteFooter);
+
+// JSON: Cards con productos
+document.addEventListener("DOMContentLoaded", function() {  
+    fetch('/productos.json')  
+        .then(response => {  
+            if (!response.ok) {  
+                throw new Error('Network response was not ok');  
+            }  
+            return response.json();  
+        })  
+        .then(data => {  
+            const productos = data.productos; 
+            const productosContainer = document.getElementById("productos-container");  
+
+            if (productosContainer) {  
+                productos.forEach(producto => {  
+                    if (producto.stock > 0) {  
+                        const card = document.createElement("div");  
+                        card.classList.add("card", "col-md-4", "mb-3");  
+
+                        card.innerHTML = `  
+                            <div class="card-body">  
+                                <h5 class="card-title">${producto.nombre}</h5>  
+                                <p class="card-text">${producto.descripcion}</p>  
+                                <p class="card-text">Precio: $${producto.precio}</p>  
+                                <p class="card-text">Stock: ${producto.stock}</p>  
+                            </div>  
+                        `;  
+
+                        productosContainer.appendChild(card);  
+                    }  
+                });  
+            } else {  
+                console.error("El contenedor de productos no existe.");  
+            }  
+        })  
+        .catch(error => console.error('Error al cargar el JSON:', error));  
+});  
+
+// JSON: Login 
+
+let usuarios = [];  
+
+function cargarUsuarios() {  
+    return fetch('/productos.json')  
+        .then(response => {  
+            if (!response.ok) {  
+                throw new Error('Error en la carga del archivo JSON');  
+            }  
+            return response.json();  
+        })  
+        .then(data => {  
+            usuarios = data.usuarios; 
+        })  
+        .catch(error => {  
+            console.error(error);  
+        });  
+}  
+
+const formularioLogin = document.getElementById('formulario-login');  
+const mensajeError = document.getElementById('mensaje-error');  
+
+cargarUsuarios().then(() => {  
+    formularioLogin.addEventListener('submit', function(event) {  
+        event.preventDefault(); 
+
+        const usuarioInput = document.getElementById('usuario').value;  
+        const contrasenaInput = document.getElementById('contraseña').value;  
+
+        const usuarioEncontrado = usuarios.find(usuario => usuario.usuario === usuarioInput && usuario.contrasena === contrasenaInput);  
+
+        if (usuarioEncontrado) {  
+
+            // Login exitoso  
+            alert(`Bienvenido ${usuarioEncontrado.rol}`);  
+            
+            // Redireccionar según el rol del usuario  
+            switch (usuarioEncontrado.rol) {  
+                case 'administrador':  
+                    window.location.href = 'admi.html'; // Redirige al administrador  
+                    break;  
+                case 'creador de contenido':  
+                    window.location.href = '/pages/ccontenido.html'; // Redirige al creador de contenido  
+                    break;  
+                case 'usuario normal':  
+                    window.location.href = 'tienda.html'; // Redirige al usuario normal  
+                    break;  
+                default:  
+                    console.error('Rol no reconocido');  
+            }  
+        } else {  
+            // Login fallido  
+            mensajeError.style.display = 'block'; 
+        }  
+    });  
+});

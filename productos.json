@@ -9,7 +9,7 @@
     {
       "nombre": "Producto 2",
       "descripcion": "Descripción del Producto 2",
-      "stock": 0,
+      "stock": 10,
       "precio": 200.0
     },
     {
