@@ -1,5 +1,7 @@
 /* Estilo del menu*/
-
+body {
+    overflow-y: auto;
+}
 nav {
     padding: 10px 20px;
     display: flex;
@@ -112,23 +114,7 @@ nav {
 
 }
 
-/* Estilos de login */
-.contenedor-login {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
 
-.titulo-login {
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-}
 
 .campo-login {
     width: 100%;
@@ -144,84 +130,203 @@ nav {
     margin-top: 10px;
 }
 
-/* Carrusel*/
-
-@-webkit-keyframes scroll {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(calc(-250px * 7));
-              transform: translateX(calc(-250px * 7));
-    }
-  }
-  
-  @keyframes scroll {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    100% {
-      -webkit-transform: translateX(calc(-250px * 7));
-              transform: translateX(calc(-250px * 7));
-    }
-  }
-  .loop--slider {
-    height: 500px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-  }
-  
-  .loop--slider::before, .loop--slider::after {
-    background: -webkit-gradient(linear, left top, right top, from(#f7e6c7), to(rgba(255, 255, 255, 0)));
-    background: linear-gradient(to right, #f7e6c7 0%, rgba(255, 255, 255, 0) 100%);
-    content: "";
-     position: absolute;
-    margin-top: 0.9999%;
-    height: 250px; 
-    width: 250px; 
-    z-index: 2;
-  }
-  
-  .loop--slider::after {
-    right: 0;
-    top: 0;
-    -webkit-transform: rotateZ(180deg);
-            transform: rotateZ(180deg);
-  }
-  
-  .loop--slider::before {
-    left: 0;
-    top: 0;
-  }
-  
-  .loop--slider .loop--slide--track {
-    -webkit-animation: scroll 40s linear infinite;
-            animation: scroll 40s linear infinite;
-    display: -webkit-box;
-    display: flex;
-  }
-  
-  .loop--slider .loop--slide {
-    height: 300px; 
-    width: 300px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.loop--slider .loop--slide img {
-    max-width: 100%;  
-    max-height: 100%; 
-    object-fit: cover; 
-}
 
 .bg{
     background-color: #f7e6c7;
-margin-top: 5%;
+}
+
+.titulo4{
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.titulo6{
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin:3px;
+    padding: 3px;
+}
+
+.botoncito3{
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+   border-radius: 25px;
+  background-color: rgba(255, 222, 173, 0);
+   border: solid #EDAA75;
+   font-family: 'Poppins', sans-serif;
+color: #EDAA75;
+     transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botoncito3:hover{
+    border: solid #DF7A40;
+    transform: scale(1.1);
+    color: #DF7A40;
+}
+.centrar{
+    text-align: center;
+    align-items: center;
+}
+
+.coockies{
+    position: fixed;
+     bottom: 0; 
+     width: 100%;
+     height: 20%;
+     background: rgb(31, 28, 27);
+      text-align: center; 
+      padding: 10px;
+      color: white;
+      z-index: 1;
+}
+
+/* Contenedor de Productos */
+#productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px;
+}
+
+
+
+.custom-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+/* Imagen del Producto */
+/* Estilo de la Tarjeta */
+.custom-card {
+    display: flex;
+    flex-direction: row;
+    border: none; 
+    border-radius: 10px;
+    max-width: 600px; 
+    background-color: #fff; 
+    overflow: hidden; 
+    margin: 25px;
+}
+
+/* Imagen del Producto */
+.custom-card img {
+    width: 450px; 
+    height: 450px; 
+    object-fit: cover; 
+    border-right: 1px solid #e0e0e0; 
+}
+
+/* Contenido de la Tarjeta */
+.custom-card .card-body {
+    flex: 2;
+    padding: 15px;
+    text-align: left; 
+}
+
+
+.custom-card .card-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.custom-card .card-text {
+    font-family: 'Montserrat', sans-serif;
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+
+/* Estilos de fondo */
+.bg2 {
+    background-image: url('https://fmrockandpop.com/media/k2/items/cache/43bdaccb0f6fda3be8ffb6f9cfeb8aaa_L.webp?t=20231202_002038');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    margin: 0;
+}
+
+
+.centrador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos de login */
+.contenedor-login {
+    max-width: 400px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.titulo-login {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: #333;
+}
+
+.campo-login {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.botoncito {
+    background-color: #e0de54;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.botoncito:hover {
+    background-color: #dfba42;
+}
+
+.mensaje-error {
+    color: red;
+    font-size: 0.875rem;
+}
+
+.bg3{
+    background-image: url('https://giffiles.alphacoders.com/158/158667.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+background-color: #4EB5ED;
+    height: 100vh; 
+   
+}
+
+
+
+.contenedor-central {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ margin-top: 25px;
+}
+
+.no-style-link {
+    text-decoration: none; 
+    color: inherit; 
 
 }
 

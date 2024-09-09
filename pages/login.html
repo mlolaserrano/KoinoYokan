@@ -6,29 +6,29 @@
     <title>Login</title>
     <link rel="stylesheet" href="/assets/style2.css">
 </head>
-<body>
+<body class="bg2">
 
+    <div class="centrador">
+        <div class="contenedor-login">
+            <form id="formulario-login">
+                <h2 class="titulo-login">Iniciar Sesión</h2>
 
-    <div class="contenedor-login">
-        <form id="formulario-login">
-            <h2 class="titulo-login">Iniciar Sesión</h2>
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" class="campo-login" required>
 
-            <label for="usuario">Usuario</label>
-            <input type="text" id="usuario" class="campo-login" required>
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" class="campo-login" required>
 
-            <label for="contraseña">Contraseña</label>
-            <input type="password" id="contraseña" class="campo-login" required>
-
-            <button type="submit" class="botoncito">Ingresar</button>
-            <p id="mensaje-error" class="mensaje-error" style="display:none;">Usuario o contraseña incorrectos.</p>
-        </form>
+                <button type="submit" class="botoncito">Ingresar</button>
+                <p id="mensaje-error" class="mensaje-error" style="display:none;">Usuario o contraseña incorrectos.</p>
+            </form>
+        </div>
     </div>
 
     <footer>
         <componente-footer></componente-footer>
-      </footer>
-      
-
+    </footer>
+    
     <script src="/assets/script.js"></script>
 </body>
 </html>

@@ -1,23 +1,86 @@
 {
   "productos": [
     {
-      "nombre": "Producto 1",
-      "descripcion": "Descripción del Producto 1",
+      "nombre": "Todo El Día Asi",
+      "descripcion": "Remerón hombre talle unico",
       "stock": 10,
-      "precio": 100.0
+      "precio": 20000,
+      "imagen": "/imagenes/producto 1.png"
     },
     {
-      "nombre": "Producto 2",
-      "descripcion": "Descripción del Producto 2",
+      "nombre": "Todo El Día Asi",
+      "descripcion": "Remerón mujer talle unico",
       "stock": 10,
-      "precio": 200.0
+      "precio": 20000,
+      "imagen": "/imagenes/producto 2.png"
     },
     {
-      "nombre": "Producto 3",
-      "descripcion": "Descripción del Producto 3",
+      "nombre": "Lo que Hoy Quieras",
+      "descripcion": "Remerón mujer talle unico",
       "stock": 5,
-      "precio": 150.0
+      "precio": 20000,
+      "imagen": "/imagenes/producto 3.png"
+    },
+    {
+      "nombre": "Lo que Hoy Quieras",
+      "descripcion": "Remerón hombre talle unico",
+      "stock": 5,
+      "precio": 20000,
+      "imagen": "/imagenes/producto 4.png"
+    },
+    {
+      "nombre": "Lejos de todo",
+      "descripcion": "Remera Unisex",
+      "stock": 5,
+      "precio": 20000,
+      "imagen": "/imagenes/producto 5.png"
+    },
+    {
+      "nombre": "La Danza del Espacio Tiempo",
+      "descripcion": "Remera Unisex",
+      "stock": 5,
+      "precio": 20000,
+      "imagen": "/imagenes/producto 6.png"
+    },
+    {
+      "nombre": "Nada Mas Que Vos",
+      "descripcion": "Remera Unisex",
+      "stock": 5,
+      "precio": 20000,
+      "imagen": "/imagenes/producto 7.png"
+    },
+    {
+      "nombre": "Me siento en primavera",
+      "descripcion": "Remera Unisex",
+      "stock": 5,
+      "precio": 20000,
+      "imagen": "/imagenes/producto 8.png"
+    },
+    {
+      "nombre": "Para Crecer",
+      "descripcion": "Remera Unisex",
+      "stock": 5,
+      "precio": 20000,
+      "imagen": "/imagenes/producto 9.png"
     }
+    ,
+    {
+      "nombre": "Persiguiendo el Sol",
+      "descripcion": "Remera Unisex",
+      "stock": 50,
+      "precio": 20000,
+      "imagen": "/imagenes/producto 10.png"
+    }
+    
+    
+    
+    
+    
+    
+    
+  
+
+
   ],
   "usuarios": [
     {

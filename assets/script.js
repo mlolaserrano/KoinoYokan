@@ -161,6 +161,7 @@ class componenteMenu extends HTMLElement {
             <li><a href="#discografia">Discografía</a></li>
             <li><a href="#eventos">Eventos</a></li>
             <li><a href="#contacto">Contacto</a></li>
+          <a href="/pages/login.html">  <i class="fi fi-rr-circle-user" style="font-size: 20px "></i> </a>
         </ul>
     </nav>
         `;
@@ -184,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch('/productos.json')  
         .then(response => {  
             if (!response.ok) {  
-                throw new Error('Error');  
+                throw new Error('Network response was not ok');  
             }  
             return response.json();  
         })  
@@ -196,26 +197,26 @@ document.addEventListener("DOMContentLoaded", function() {
                 productos.forEach(producto => {  
                     if (producto.stock > 0) {  
                         const card = document.createElement("div");  
-                        card.classList.add("card", "col-md-4", "mb-3");  
+                        card.classList.add("custom-card");  
 
                         card.innerHTML = `  
+                            <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
                             <div class="card-body">  
                                 <h5 class="card-title">${producto.nombre}</h5>  
                                 <p class="card-text">${producto.descripcion}</p>  
                                 <p class="card-text">Precio: $${producto.precio}</p>  
                                 <p class="card-text">Stock: ${producto.stock}</p>  
                             </div>  
-                        `;  
+                        `;
 
                         productosContainer.appendChild(card);  
                     }  
                 });  
-            } else {  
-                console.error("El contenedor de productos no existe.");  
-            }  
+            } 
         })  
         .catch(error => console.error('Error al cargar el JSON:', error));  
-});  
+});
+
 
 
 
@@ -228,7 +229,7 @@ function cargarUsuarios() {
     return fetch('/productos.json')  
         .then(response => {  
             if (!response.ok) {  
-                throw new Error('Sin datos');  
+                throw new Error('Error en la carga del archivo JSON');  
             }  
             return response.json();  
         })  
@@ -277,5 +278,3 @@ cargarUsuarios().then(() => {
         }  
     });  
 });
-
-// BIBLIOGRAFIA: https://developer.mozilla.org/es/docs/Learn/JavaScript/Objects/JSON
