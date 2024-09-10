@@ -161,7 +161,7 @@ class componenteMenu extends HTMLElement {
             <li><a href="#discografia">Discografía</a></li>
             <li><a href="#eventos">Eventos</a></li>
             <li><a href="#contacto">Contacto</a></li>
-          <a href="/pages/login.html">  <i class="fi fi-rr-circle-user" style="font-size: 20px "></i> </a>
+          <a href="/pages/login.html" class="no-style-link">  <i class="fi fi-rr-circle-user" style="font-size: 20px "></i> </a>
         </ul>
     </nav>
         `;
@@ -177,13 +177,13 @@ class componenteMenu extends HTMLElement {
         <div class="container text-center">
         <div class="row align-items-start">
           <div class="col">
-         <a href="" class="no-style-link"><i class="fi fi-brands-spotify"></i> </a>
+         <a href="https://open.spotify.com/intl-es/artist/31kgZWvoPhxDcTKgVbgi3J?autoplay=true" target="_blank"  class="no-style-link"><i class="fi fi-brands-spotify" style="font-size: 40px; color: #f6a700;" ></i> </a>
           </div>
           <div class="col">
-          <a href="" class="no-style-link"><i class="fi fi-brands-youtube"></i></a>
+          <a href="https://www.youtube.com/channel/UCk_FkSVnFOhHIn6ejDtcDBw" target="_blank"  class="no-style-link"><i class="fi fi-brands-youtube" style="font-size: 40px; color: #f6a700" ></i></a>
           </div>
           <div class="col">
-          <a href="" class="no-style-link"><i class="fi fi-brands-instagram"></i></a>
+          <a href="https://www.instagram.com/koinoyokanmusica/" target="_blank" class="no-style-link"><i class="fi fi-brands-instagram" style="font-size: 40px; color: #f6a700" ></i></a>
           </div>
         </div>
       </div>
@@ -278,7 +278,7 @@ cargarUsuarios().then(() => {
                 case 'creador de contenido':  
                     window.location.href = '/pages/ccontenido.html'; // Redirige al creador de contenido  
                     break;  
-                case 'usuario normal':  
+                case 'usuario':  
                     window.location.href = 'tienda.html'; // Redirige al usuario normal  
                     break;  
                 default:  
