@@ -174,7 +174,19 @@ class componenteMenu extends HTMLElement {
     connectedCallback() {
       this.innerHTML =
         `
-      // ---------------------> COMPLETAR <---------------------------
+        <div class="container text-center">
+        <div class="row align-items-start">
+          <div class="col">
+         <a href=""><i class="fi fi-brands-spotify"></i> </a>
+          </div>
+          <div class="col">
+          <a href=""><i class="fi fi-brands-youtube"></i></a>
+          </div>
+          <div class="col">
+          <a href=""><i class="fi fi-brands-instagram"></i></a>
+          </div>
+        </div>
+      </div>
         `;
     }
   }
