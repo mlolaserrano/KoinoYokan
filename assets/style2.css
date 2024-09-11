@@ -1,9 +1,10 @@
 
 
 /* Estilo del menu*/
-body {
-    overflow-y: hidden;
+html {
+    overflow-x: hidden;
 }
+
 nav {
     padding: 10px 20px;
     display: flex;
