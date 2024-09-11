@@ -40,7 +40,7 @@ function validarFormulario(event) {
     }
 
     // Redirección a home.html si todo es válido
-    window.location.href = "/pages/koino.html";
+    window.location.href = "./pages/koino.html";
     return true;
 }
 
@@ -155,13 +155,13 @@ class componenteMenu extends HTMLElement {
         `
     <nav>
         <div class="logo-container">
-            <a href="/pages/koino.html" class="logo">Koino Jokan</a>
+            <a href="./koino.html" class="logo">Koino Jokan</a>
         </div>
         <ul class="nav-menu">
             <li><a href="#discografia">Discografía</a></li>
             <li><a href="#eventos">Eventos</a></li>
             <li><a href="#contacto">Contacto</a></li>
-          <a href="/pages/login.html" class="no-style-link">  <i class="fi fi-rr-circle-user" style="font-size: 20px "></i> </a>
+          <a href="./login.html" class="no-style-link">  <i class="fi fi-rr-circle-user" style="font-size: 20px "></i> </a>
         </ul>
     </nav>
         `;
@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function() {
 let usuarios = [];  
 
 function cargarUsuarios() {  
-    return fetch('/productos.json')  
+    return fetch('../productos.json')  
         .then(response => {  
             if (!response.ok) {  
                 throw new Error('Error en la carga del archivo JSON');  
@@ -273,13 +273,13 @@ cargarUsuarios().then(() => {
             // Redireccionar según el rol del usuario  
             switch (usuarioEncontrado.rol) {  
                 case 'administrador':  
-                    window.location.href = 'admi.html'; // Redirige al administrador  
+                    window.location.href = '../pages/admi.html'; // Redirige al administrador  
                     break;  
                 case 'creador de contenido':  
-                    window.location.href = '/pages/ccontenido.html'; // Redirige al creador de contenido  
+                    window.location.href = '../pages/ccontenido.html'; // Redirige al creador de contenido  
                     break;  
                 case 'usuario':  
-                    window.location.href = 'tienda.html'; // Redirige al usuario normal  
+                    window.location.href = '../pages/tienda.html'; // Redirige al usuario normal  
                     break;  
                 default:  
                     console.error('Rol no reconocido');  

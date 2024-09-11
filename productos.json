@@ -3,16 +3,16 @@
     {
       "nombre": "Todo El Día Asi",
       "descripcion": "Remerón hombre talle unico",
-      "stock": 10,
+      "stock": 0,
       "precio": 20000,
       "imagen": "/imagenes/producto 1.png"
     },
     {
       "nombre": "Todo El Día Asi",
       "descripcion": "Remerón mujer talle unico",
-      "stock": 10,
+      "stock": 0,
       "precio": 20000,
-      "imagen": "/imagenes/producto 2.png"
+      "imagen": "./imagenes/producto 2.png"
     },
     {
       "nombre": "Lo que Hoy Quieras",
@@ -26,7 +26,7 @@
       "descripcion": "Remerón hombre talle unico",
       "stock": 5,
       "precio": 20000,
-      "imagen": "/imagenes/producto 4.png"
+      "imagen": "./imagenes/producto 4.png"
     },
     {
       "nombre": "Lejos de todo",
