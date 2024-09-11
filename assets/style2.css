@@ -2,7 +2,7 @@
 
 /* Estilo del menu*/
 body {
-    overflow-y: shidden;
+    overflow-y: hidden;
 }
 nav {
     padding: 10px 20px;
