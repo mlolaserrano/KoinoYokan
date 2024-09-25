@@ -1,7 +1,16 @@
-/* Estilo del menu*/
-body {
-    overflow-y: auto;
+/* Root */
+:root{
+    color-scheme: light dark;
+
 }
+
+/* Estilo del menu*/
+#bg {
+    overflow-x:hidden;
+    color: light-dark(#333b3c, #efefec);
+ background-color: light-dark(#efedea, #202020);
+}
+
 nav {
     padding: 10px 20px;
     display: flex;
@@ -39,6 +48,7 @@ nav {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     transition: color 0.3s ease;
+    color: light-dark(#333b3c, #efefec);
 }
 
 .nav-menu li a:hover {
@@ -70,10 +80,11 @@ nav {
     border-radius: 25px;
     background-color: rgb(236, 193, 113);
     padding: 10px 20px;
-
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-size: 16px;
+    
+    
 }
 
 .botoncito:hover {
@@ -85,10 +96,11 @@ nav {
     border-radius: 25px;
     background-color: rgb(236, 193, 113);
     padding: 5px 5px;
-
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-size: 16px;
+    color: light-dark(#333b3c, #000000);
+    background-color: light-dark(#D6AF00, #dbcc75);
 }
 
 .botoncito2:hover {
@@ -100,6 +112,8 @@ nav {
 .titulo1 {
     font-family: "Berkshire Swash", serif;
     color: rgb(121, 100, 91);
+    color: light-dark(rgb(121, 100, 91), #c2ad36);
+    
 }
 
 .titulo3 {
@@ -107,6 +121,8 @@ nav {
     font-size: 25px;
     font-style: italic;
     color: #444444;
+    color: light-dark(rgb(121, 100, 91), #ffffff);
+
 }
 
 .llamada {
@@ -133,6 +149,8 @@ nav {
 
 .bg{
     background-color: #f7e6c7;
+    color: light-dark(#333b3c, #efefec);
+    background-color: light-dark(#efedea, #383838);
 }
 
 .titulo4{
@@ -175,11 +193,11 @@ color: #EDAA75;
     position: fixed;
      bottom: 0; 
      width: 100%;
-     height: 20%;
+     height: 30%;
      background: rgb(31, 28, 27);
       text-align: center; 
-      padding: 10px;
-      color: white;
+      padding: 50px;
+        color: white;
       z-index: 1;
 }
 
@@ -391,4 +409,21 @@ background-color: #FFFFFF;
 .llamada1{
 color: #444444;
 font-style: italic;
+color: light-dark(#333b3c, #efefec);
+
+}
+
+.botonajax{
+    border-radius: 25px;
+    background-color: rgb(230, 174, 141);
+    padding: 10px;
+    margin: 1%;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botonajax:hover {
+    background-color: rgb(236, 193, 113);
+    transform: scale(1.1);
+    /* Aumenta el tamaño en un 10% */
 }
