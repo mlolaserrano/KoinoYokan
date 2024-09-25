@@ -230,9 +230,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
-
-
 // JSON: Login 
 
 let usuarios = [];  
