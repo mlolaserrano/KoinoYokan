@@ -177,13 +177,13 @@ class componenteMenu extends HTMLElement {
         <div class="container text-center">
         <div class="row align-items-start">
           <div class="col">
-         <a href="https://open.spotify.com/intl-es/artist/31kgZWvoPhxDcTKgVbgi3J?autoplay=true" target="_blank"  class="no-style-link"><i class="fi fi-brands-spotify" style="font-size: 40px; color: #f6a700;" ></i> </a>
+         <a href="https://open.spotify.com/intl-es/artist/31kgZWvoPhxDcTKgVbgi3J?autoplay=true" target="_blank"  class="no-style-link"><i class="fi fi-brands-spotify"  ></i> </a>
           </div>
           <div class="col">
-          <a href="https://www.youtube.com/channel/UCk_FkSVnFOhHIn6ejDtcDBw" target="_blank"  class="no-style-link"><i class="fi fi-brands-youtube" style="font-size: 40px; color: #f6a700" ></i></a>
+          <a href="https://www.youtube.com/channel/UCk_FkSVnFOhHIn6ejDtcDBw" target="_blank"  class="no-style-link"><i class="fi fi-brands-youtube" ></i></a>
           </div>
           <div class="col">
-          <a href="https://www.instagram.com/koinoyokanmusica/" target="_blank" class="no-style-link"><i class="fi fi-brands-instagram" style="font-size: 40px; color: #f6a700" ></i></a>
+          <a href="https://www.instagram.com/koinoyokanmusica/" target="_blank" class="no-style-link"><i class="fi fi-brands-instagram"></i></a>
           </div>
         </div>
       </div>
@@ -287,3 +287,4 @@ cargarUsuarios().then(() => {
         }  
     });  
 });
+

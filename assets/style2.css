@@ -4,11 +4,22 @@
 
 }
 
+img {
+    opacity: var(--image-opacity);
+    transition: opacity 0.3s ease; 
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --image-opacity: 0.5; 
+    }
+}
 /* Estilo del menu*/
 #bg {
     overflow-x:hidden;
     color: light-dark(#333b3c, #efefec);
- background-color: light-dark(#efedea, #202020);
+ background-color: light-dark(#e7e7e7, #202020);
 }
 
 nav {
@@ -22,8 +33,9 @@ nav {
     flex: 1;
 }
 
+
 .logo {
-    color: rgb(214, 175, 0);
+    color: light-dark(rgb(214, 175, 0), #885913);
     text-decoration: none;
     font-family: "Berkshire Swash", serif;
     font-size: 25px;
@@ -43,12 +55,11 @@ nav {
 }
 
 .nav-menu li a {
-    color: rgb(0, 0, 0);
+    color: light-dark(#333b3c, #efefec);
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     transition: color 0.3s ease;
-    color: light-dark(#333b3c, #efefec);
 }
 
 .nav-menu li a:hover {
@@ -100,21 +111,24 @@ nav {
     transition: background-color 0.3s ease, transform 0.3s ease;
     font-size: 16px;
     color: light-dark(#333b3c, #000000);
-    background-color: light-dark(#D6AF00, #dbcc75);
+    background-color: light-dark(#dac569, #4b4030);
+    margin: 0.5%;
 }
 
 .botoncito2:hover {
     background-color: #D6AF00;
     transform: scale(1.1);
+    color: light-dark(#333b3c, #000000);
+    background-color: light-dark(#D6AF00, #5e503c);
 }
 
 
 .titulo1 {
     font-family: "Berkshire Swash", serif;
-    color: rgb(121, 100, 91);
-    color: light-dark(rgb(121, 100, 91), #c2ad36);
+    color: light-dark(#dac569, #9b6b23);
     
 }
+
 
 .titulo3 {
     font-family: 'Poppins', sans-serif;
@@ -157,6 +171,7 @@ nav {
     text-align: center;
     margin: 5px;
     padding: 5px;
+    color: light-dark(#dac569, #9b6b23);
 }
 
 .titulo6{
@@ -415,15 +430,21 @@ color: light-dark(#333b3c, #efefec);
 
 .botonajax{
     border-radius: 25px;
-    background-color: rgb(230, 174, 141);
-    padding: 10px;
+    color: light-dark(#333b3c, #000000);
+    background-color: light-dark(#dac569, #4b4030);    padding: 10px;
     margin: 1%;
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .botonajax:hover {
-    background-color: rgb(236, 193, 113);
+    color: light-dark(#333b3c, #000000);
+    background-color: light-dark(#D6AF00, #5e503c);
     transform: scale(1.1);
-    /* Aumenta el tamaño en un 10% */
+}
+
+
+.fi{
+    font-size: 40px;
+    color: light-dark(#ddc557, #9b6b23);
 }
