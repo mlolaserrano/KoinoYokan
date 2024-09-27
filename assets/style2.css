@@ -89,7 +89,8 @@ nav {
 
 .botoncito {
     border-radius: 25px;
-    background-color: rgb(236, 193, 113);
+    color: light-dark(#333b3c, #000000);
+    background-color: light-dark(#dac569, #4b4030);
     padding: 10px 20px;
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -99,7 +100,8 @@ nav {
 }
 
 .botoncito:hover {
-    background-color: #D6AF00;
+    color: light-dark(#333b3c, #000000);
+    background-color: light-dark(#D6AF00, #5e503c);
     transform: scale(1.1);
 }
 
@@ -297,16 +299,18 @@ color: #EDAA75;
 .contenedor-login {
     max-width: 400px;
     padding: 50px;
-    background-color: white;
+    background-color: light-dark(#b4a075, #202020);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    color:light-dark(#202020, #d6d0c2);
+
 }
 
 .titulo-login {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
-    color: #333;
+    color:light-dark(#202020, #b4a075);
 }
 
 .campo-login {
@@ -318,21 +322,7 @@ color: #EDAA75;
     border-radius: 5px;
 }
 
-.botoncito {
-    background-color: #e0de54;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
 
-.botoncito:hover {
-    background-color: #dfba42;
-}
 
 .mensaje-error {
     color: red;
@@ -447,4 +437,18 @@ color: light-dark(#333b3c, #efefec);
 .fi{
     font-size: 40px;
     color: light-dark(#ddc557, #9b6b23);
+}
+
+.tiendaheader{
+    background-color: light-dark(#dac569, #685b4b);;
+    color: #202020;
+     padding: 25px;
+}
+
+.card-body{
+    background-color: light-dark(#E7E7E7, #202020);
+}
+
+#tiendatexto{
+    color: light-dark(#000000, #ffffff);
 }

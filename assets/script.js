@@ -214,10 +214,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         card.innerHTML = `  
                             <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
                             <div class="card-body">  
-                                <h5 class="card-title">${producto.nombre}</h5>  
-                                <p class="card-text">${producto.descripcion}</p>  
-                                <p class="card-text">Precio: AR$${producto.precio}</p>  
-                                <p class="card-text">Stock: ${producto.stock}</p>  
+                                <h5 class="card-title" id="tiendatexto">${producto.nombre}</h5>  
+                                <p class="card-text" id="tiendatexto">${producto.descripcion}</p>  
+                                <p class="card-text" id="tiendatexto">Precio: AR$${producto.precio}</p>  
+                                <p class="card-text" id="tiendatexto">Stock: ${producto.stock}</p>  
                             </div>  
                         `;
 
