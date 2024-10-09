@@ -288,3 +288,18 @@ cargarUsuarios().then(() => {
     });  
 });
 
+            // lyrics
+            document.addEventListener('DOMContentLoaded', () => {
+                fetch('https://api.lyrics.ovh/v1/Daddy Yankee/Llamado de emergencia')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.lyrics) {
+                            document.getElementById('lyrics-container').innerText = data.lyrics;
+                        } else {
+                            console.error('No se encontró');
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            });
+            
+

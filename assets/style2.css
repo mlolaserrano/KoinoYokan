@@ -452,3 +452,10 @@ color: light-dark(#333b3c, #efefec);
 #tiendatexto{
     color: light-dark(#000000, #ffffff);
 }
+
+
+
+.letra {
+    width: 800px;
+    columns: 3 300px;
+}
