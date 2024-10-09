@@ -36,7 +36,7 @@ function validarFormulario(event) {
 
     // Validación de la fecha (Ejercicio 3)
     if (!validarFecha(selectedDate)) {
-        return false; 
+        return false;
     }
 
     // Redirección a home.html si todo es válido
@@ -59,11 +59,11 @@ function mostrarInputNumero() {
             numberInput.min = "30";
             numberInput.max = "50";
             numberInput.placeholder = "Propina ($usd)";
-            numberInput.classList.add("styled-input"); 
+            numberInput.classList.add("styled-input");
             numberContainer.appendChild(numberInput);
         }
     } else {
-        
+
         // Si se desmarca el checkbox, eliminar el input de número
         const numberInput = document.getElementById("numberInput");
         if (numberInput) {
@@ -97,7 +97,7 @@ function validarFecha(fechaSeleccionada) {
 }
 
 // Ejercicio 4: Mostrar pantalla de carga, pantalla intermedia y pantalla real
-window.onload = function() {
+window.onload = function () {
     const pantallaCarga = document.getElementById("pantallaCarga");
     const pantallaIntermedia = document.getElementById("pantallaIntermedia");
     const popup = document.getElementById("popup");
@@ -151,8 +151,8 @@ document.addEventListener('DOMContentLoaded', function () {
 // Menu
 class componenteMenu extends HTMLElement {
     connectedCallback() {
-      this.innerHTML =
-        `
+        this.innerHTML =
+            `
     <nav>
         <div class="logo-container">
             <a href="/pages/koino.html" class="logo">Koino Jokan</a>
@@ -166,14 +166,14 @@ class componenteMenu extends HTMLElement {
     </nav>
         `;
     }
-  }
-  customElements.define('componente-menu', componenteMenu);
-  
-  // footer
-  class componenteFooter extends HTMLElement {
+}
+customElements.define('componente-menu', componenteMenu);
+
+// footer
+class componenteFooter extends HTMLElement {
     connectedCallback() {
-      this.innerHTML =
-        `
+        this.innerHTML =
+            `
         <div class="container text-center">
         <div class="row align-items-start">
           <div class="col">
@@ -189,27 +189,27 @@ class componenteMenu extends HTMLElement {
       </div>
         `;
     }
-  }
-  customElements.define('componente-footer', componenteFooter);
+}
+customElements.define('componente-footer', componenteFooter);
 
 // JSON: Cards con productos
-document.addEventListener("DOMContentLoaded", function() {  
-    fetch('/productos.json')  
-        .then(response => {  
-            if (!response.ok) {  
-                throw new Error('Network response was not ok');  
-            }  
-            return response.json();  
-        })  
-        .then(data => {  
-            const productos = data.productos; 
-            const productosContainer = document.getElementById("productos-container");  
+document.addEventListener("DOMContentLoaded", function () {
+    fetch('/productos.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const productos = data.productos;
+            const productosContainer = document.getElementById("productos-container");
 
-            if (productosContainer) {  
-                productos.forEach(producto => {  
-                    if (producto.stock > 0) {  
-                        const card = document.createElement("div");  
-                        card.classList.add("custom-card");  
+            if (productosContainer) {
+                productos.forEach(producto => {
+                    if (producto.stock > 0) {
+                        const card = document.createElement("div");
+                        card.classList.add("custom-card");
 
                         card.innerHTML = `  
                             <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
@@ -221,85 +221,95 @@ document.addEventListener("DOMContentLoaded", function() {
                             </div>  
                         `;
 
-                        productosContainer.appendChild(card);  
-                    }  
-                });  
-            } 
-        })  
-        .catch(error => console.error('Error al cargar el JSON:', error));  
+                        productosContainer.appendChild(card);
+                    }
+                });
+            }
+        })
+        .catch(error => console.error('Error al cargar el JSON:', error));
 });
 
 
 // JSON: Login 
 
-let usuarios = [];  
+let usuarios = [];
 
-function cargarUsuarios() {  
-    return fetch('/productos.json')  
-        .then(response => {  
-            if (!response.ok) {  
-                throw new Error('Error en la carga del archivo JSON');  
-            }  
-            return response.json();  
-        })  
-        .then(data => {  
-            usuarios = data.usuarios; 
-        })  
-        .catch(error => {  
-            console.error(error);  
-        });  
-}  
+function cargarUsuarios() {
+    return fetch('/productos.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error en la carga del archivo JSON');
+            }
+            return response.json();
+        })
+        .then(data => {
+            usuarios = data.usuarios;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+}
 
-const formularioLogin = document.getElementById('formulario-login');  
-const mensajeError = document.getElementById('mensaje-error');  
+const formularioLogin = document.getElementById('formulario-login');
+const mensajeError = document.getElementById('mensaje-error');
 
-cargarUsuarios().then(() => {  
-    formularioLogin.addEventListener('submit', function(event) {  
-        event.preventDefault(); 
+cargarUsuarios().then(() => {
+    formularioLogin.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-        const usuarioInput = document.getElementById('usuario').value;  
-        const contrasenaInput = document.getElementById('contraseña').value;  
+        const usuarioInput = document.getElementById('usuario').value;
+        const contrasenaInput = document.getElementById('contraseña').value;
 
-        const usuarioEncontrado = usuarios.find(usuario => usuario.usuario === usuarioInput && usuario.contrasena === contrasenaInput);  
+        const usuarioEncontrado = usuarios.find(usuario => usuario.usuario === usuarioInput && usuario.contrasena === contrasenaInput);
 
-        if (usuarioEncontrado) {  
+        if (usuarioEncontrado) {
 
             // Login exitoso  
-            alert(`Bienvenido ${usuarioEncontrado.rol}`);  
-            
+            alert(`Bienvenido ${usuarioEncontrado.rol}`);
+
             // Redireccionar según el rol del usuario  
-            switch (usuarioEncontrado.rol) {  
-                case 'administrador':  
+            switch (usuarioEncontrado.rol) {
+                case 'administrador':
                     window.location.href = 'admi.html'; // Redirige al administrador  
-                    break;  
-                case 'creador de contenido':  
+                    break;
+                case 'creador de contenido':
                     window.location.href = '/pages/ccontenido.html'; // Redirige al creador de contenido  
-                    break;  
-                case 'usuario':  
+                    break;
+                case 'usuario':
                     window.location.href = 'tienda.html'; // Redirige al usuario normal  
-                    break;  
-                default:  
-                    console.error('Rol no reconocido');  
-            }  
-        } else {  
+                    break;
+                default:
+                    console.error('Rol no reconocido');
+            }
+        } else {
             // Login fallido  
-            mensajeError.style.display = 'block'; 
-        }  
-    });  
+            mensajeError.style.display = 'block';
+        }
+    });
 });
 
-            // lyrics
-            document.addEventListener('DOMContentLoaded', () => {
-                fetch('https://api.lyrics.ovh/v1/Daddy Yankee/Llamado de emergencia')
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.lyrics) {
-                            document.getElementById('lyrics-container').innerText = data.lyrics;
-                        } else {
-                            console.error('No se encontró');
-                        }
-                    })
-                    .catch(error => console.error('Error:', error));
-            });
-            
+// lyrics
 
+
+
+
+
+// lyrics
+function letras(cancion) {
+    console.log("Cargando letra para:", cancion);
+    fetch(`https://api.lyrics.ovh/v1/Coldplay/${cancion}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            const container = document.getElementById("lyrics-container"); 
+            if (data.lyrics) {
+                container.innerHTML = data.lyrics; 
+            } else {
+                container.innerHTML = "Letra no encontrada.";
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById("lyrics-container").innerHTML = "Error al cargar la letra.";
+        });
+}
