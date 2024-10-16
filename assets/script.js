@@ -288,11 +288,6 @@ cargarUsuarios().then(() => {
     });
 });
 
-// lyrics
-
-
-
-
 
 // lyrics
 function letras(cancion) {

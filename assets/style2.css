@@ -213,9 +213,9 @@ color: #EDAA75;
      height: 30%;
      background: rgb(31, 28, 27);
       text-align: center; 
-      padding: 50px;
         color: white;
       z-index: 1;
+      padding: 1%;
 }
 
 /* Contenedor de Productos */
