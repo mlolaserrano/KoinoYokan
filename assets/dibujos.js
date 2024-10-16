@@ -1,5 +1,4 @@
 // API tareas
-import axios from 'axios';
 const apiKey = '$2a$10$EPObDpyHPTvfwAyvUX1hFOn47F.tJaU3roMXdhNG6ua7A/Mvvi2OG'; //API Keys
 
 const binId = '670fac92ad19ca34f8b9866d'; //BINS
