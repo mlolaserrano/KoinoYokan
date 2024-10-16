@@ -52,36 +52,17 @@
   <link rel="stylesheet" href="/assets/style2.css">
 </head>
 
-<body class="bg" id="bg">
-  <header>
-    <componente-menu></componente-menu>
-
-  </header>
-
-  <h1 style="background-color: red;">Lista de Tareas</h1>
-  <ul id="taskList"></ul>
-<a href="...">GitHub</a>
-  <div>
-      <input type="text" id="newTask" placeholder="Nueva tarea">
-      <input type="file" id="taskImage" accept="image/*">
-      <button onclick="addTask()">Agregar Tarea</button>
-  </div>
-
- 
-
-  <footer>
-    <componente-footer></componente-footer>
-  </footer>
-
-
-  <script src="/assets/dibujos.js"></script>
-<script src="../app.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-
-</body>
+<body>
+    <ul id="taskList"></ul>
+    <div>
+        <input type="text" id="newTask" placeholder="Nueva tarea">
+        <input type="file" id="taskImage" accept="image/*">
+        <button onclick="addTask()">Agregar Tarea</button>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/assets/dibujos.js"></script>
+  </body>
+  
 
 </html>
