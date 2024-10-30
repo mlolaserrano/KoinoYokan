@@ -145,3 +145,4 @@ async function deleteTask(taskId) {
         console.error('Error al eliminar la tarea:', error);
     }
 }
+
