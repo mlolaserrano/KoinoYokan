@@ -388,9 +388,8 @@ color: #EDAA75;
     font-size: 14px;
     color: light-dark(#333b3c, #000000);
     background-color: light-dark(#dac569, #4b4030);
-    margin: 0.5%;
+    margin: 1%;
     color:rgb(199, 150, 59);
-    margin: 0.5%;
 }
 
 .botoncito6:hover {
