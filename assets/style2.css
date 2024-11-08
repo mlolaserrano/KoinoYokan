@@ -143,6 +143,12 @@ nav {
     transform: scale(1.1);
 }
 
+.caja {
+    display: flex;
+    flex-wrap: nowrap; 
+    gap: 10px; 
+    justify-content: center; 
+
 .botoncito2 {
     border-radius: 25px;
     background-color: rgb(236, 193, 113);
@@ -278,7 +284,7 @@ color: #EDAA75;
     padding: 1%;
 }
 
-/* Media query para tablets (pantallas medianas) */
+/* Media query para tablets  */
 @media (max-width: 768px) {
     .coockies {
         height: 20%; 
@@ -286,7 +292,7 @@ color: #EDAA75;
     }
 }
 
-/* Media query para dispositivos móviles (pantallas pequeñas) */
+/* Media query para celulares */
 @media (max-width: 480px) {
     .coockies {
         height: 40%; 
