@@ -1,7 +1,22 @@
-/* Root */
-:root{
-    color-scheme: light dark;
+:root {
+    --background-color: #fff;
+    --text-color: #000;
+    --card-background-color: #ffffff;
+}
 
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1a1a1a;
+        --text-color: #e0e0e0;
+        --card-background-color: #160f0b;
+    }
+}
+
+/* Estilos de la página usando variables */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 img {
@@ -13,6 +28,7 @@ img {
 @media (prefers-color-scheme: dark) {
     :root {
         --image-opacity: 0.5; 
+        
     }
 }
 /* Estilo del menu*/
@@ -326,7 +342,12 @@ color: #EDAA75;
     background-color: #fff; 
     overflow: hidden; 
     margin: 25px;
+
+    
+    
 }
+
+
 
 /* Imagen del Producto */
 .custom-card img {
