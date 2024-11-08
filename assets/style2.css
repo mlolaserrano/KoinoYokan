@@ -156,7 +156,7 @@ nav {
     padding: 5px 5px;
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    font-size: 16px;
+    font-size: 14px;
     color: light-dark(#333b3c, #000000);
     background-color: light-dark(#dac569, #4b4030);
     margin: 0.5%;
