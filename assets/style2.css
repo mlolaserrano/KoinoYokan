@@ -541,14 +541,21 @@ color: light-dark(#333b3c, #efefec);
     text-align: left;
 }
 
-.titulo6{
+.titulo6 {
     font-family: 'Poppins', sans-serif;
     color: light-dark(#dac569, #9b6b23);
     text-align: left;
     font-size: 17px;
     margin: 3%;
-
 }
+
+/* celu */
+@media (max-width: 600px) {
+    .titulo6 {
+        font-size: 14px; 
+    }
+}
+
 
 .margenes{
     margin: 10px;
