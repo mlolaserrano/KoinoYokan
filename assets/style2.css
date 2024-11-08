@@ -148,6 +148,7 @@ nav {
     flex-wrap: nowrap; 
     gap: 10px; 
     justify-content: center; 
+}
 
 .botoncito2 {
     border-radius: 25px;
