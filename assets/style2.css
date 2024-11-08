@@ -330,9 +330,8 @@ color: #EDAA75;
 
 /* Imagen del Producto */
 .custom-card img {
-    width: 10%; 
+    width: 50%; 
     height: auto; 
-    object-fit: cover; 
     border-right: 1px solid #e0e0e0; 
 }
 
