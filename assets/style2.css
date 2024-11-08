@@ -289,7 +289,7 @@ color: #EDAA75;
 /* Media query para dispositivos móviles (pantallas pequeñas) */
 @media (max-width: 480px) {
     .coockies {
-        height: 35%; 
+        height: 45%; 
         padding: 3%; 
     }
 }
