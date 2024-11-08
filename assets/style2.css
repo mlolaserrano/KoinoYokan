@@ -558,11 +558,9 @@ color: light-dark(#333b3c, #efefec);
 
 /* discografia */
 .discografia{
-    width: 100%;
+    width: 100px;
 }
-.discografia2{
-    width: 50%;
-}
+
 .margenes{
     margin: 10px;
 }
