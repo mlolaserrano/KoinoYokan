@@ -237,7 +237,6 @@ nav {
 
 
 .bg{
-    background-color: #f7e6c7;
     color: light-dark(#333b3c, #efefec);
     background-color: light-dark(#efedea, #383838);
 }
@@ -399,22 +398,30 @@ color: #EDAA75;
     background-color: light-dark(#D6AF00, #5e503c);
 }
 
-/* Estilos de login */
+.centrador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    padding: 20px; 
+    background-color: light-dark(#f0f0f0, #121212); 
+}
+
 .contenedor-login {
     max-width: 400px;
+    width: 100%; 
     padding: 50px;
     background-color: light-dark(#b4a075, #202020);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color:light-dark(#202020, #d6d0c2);
-
+    color: light-dark(#202020, #d6d0c2);
 }
 
 .titulo-login {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
-    color:light-dark(#202020, #b4a075);
+    color: light-dark(#202020, #b4a075);
 }
 
 .campo-login {
@@ -425,8 +432,6 @@ color: #EDAA75;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
-
 
 .mensaje-error {
     color: red;
