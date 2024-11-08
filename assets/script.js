@@ -153,21 +153,33 @@ class componenteMenu extends HTMLElement {
     connectedCallback() {
         this.innerHTML =
             `
-    <nav>
-        <div class="logo-container">
-            <a href="/pages/koino.html" class="logo">Koino Jokan</a>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="#discografia">Discografía</a></li>
-            <li><a href="#eventos">Eventos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          <a href="/pages/login.html" class="no-style-link">  <i class="fi fi-rr-circle-user" style="font-size: 20px "></i> </a>
-        </ul>
-    </nav>
+            <nav>
+            <div class="logo-container">
+                <a href="/pages/koino.html" class="logo">Koino Jokan</a>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#discografia">Discografía</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+               
+            </ul> <div class="menu-toggle">☰</div>
+        </nav>
+        
         `;
     }
 }
 customElements.define('componente-menu', componenteMenu);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+
+    menuToggle.addEventListener("click", function() {
+        navMenu.classList.toggle("active");
+    });
+});
+
 
 // footer
 class componenteFooter extends HTMLElement {
