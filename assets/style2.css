@@ -1,12 +1,12 @@
 :root {
     color-scheme: light dark;
-
     --bg-color-light: #e7e7e7; /* Fondo claro */
     --text-color-light: #717272; /* Texto oscuro */
     --bg-color-dark: #202020; /* Fondo oscuro */
     --text-color-dark: #efefec; /* Texto claro */
     --image-opacity-light: 1; /* Opacidad normal */
     --image-opacity-dark: 0.5; /* Opacidad reducida en modo oscuro */
+    --nav-bar: #efefec;
     
 }
 
@@ -56,6 +56,10 @@ img {
 
 #bg.dark img {
     opacity: var(--image-opacity-dark);
+}
+
+#bg.dark li a{
+    color: var(--nav-bar);
 }
 
 nav {
