@@ -7,9 +7,13 @@
     --text-color-dark: #efefec; /* Texto claro */
     --image-opacity-light: 1; /* Opacidad normal */
     --image-opacity-dark: 0.5; /* Opacidad reducida en modo oscuro */
+    
 }
 
+p{
+    color: light-dark(#000000, #d4d4d4);
 
+}
 
 img {
     opacity: var(--image-opacity);
@@ -186,7 +190,7 @@ nav {
 .botoncito {
     border-radius: 25px;
     color: light-dark(#333b3c, #000000);
-    background-color: light-dark(#dac569, #4b4030);
+    background-color: light-dark(#dac569, #806743);
     padding: 10px 20px;
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
