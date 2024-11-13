@@ -6,12 +6,12 @@
     --text-color-dark: #efefec; /* Texto claro */
     --image-opacity-light: 1; /* Opacidad normal */
     --image-opacity-dark: 0.5; /* Opacidad reducida en modo oscuro */
-    --nav-bar: #efefec;
+    --nav-bar: #efefec; /* nav bar */
     
 }
 
 p{
-    color: light-dark(#000000, #d4d4d4);
+    color: light-dark(#000000, #ffffff);
 
 }
 
@@ -282,6 +282,7 @@ nav {
 
 .llamada {
     font-size: 16px;
+
 
 }
 
