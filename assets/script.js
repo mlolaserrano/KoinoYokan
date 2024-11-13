@@ -1,3 +1,14 @@
+function toggleTheme() {
+    const bgElement = document.body;  
+    
+    if (bgElement.classList.contains('dark')) {
+        bgElement.classList.remove('dark');
+    } else {
+        bgElement.classList.add('dark');
+    }
+}
+
+
 // Ejercicio 1: Validar el formulario (parte 1 de la consigna)
 function validarFormulario(event) {
     event.preventDefault();

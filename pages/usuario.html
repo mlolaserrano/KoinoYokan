@@ -60,69 +60,55 @@
 
 
 
-  <section>
-    <div class="container text-center">
-        <div class="row align-items-start">
-          <div class="col">
-            <div class="image-content">
-              <img src="https://i.ytimg.com/vi/Qa1sCSYdQSQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDmbWBXEXA7KF7tzEp07E0ZOEdK3w"  class="imagen2">
-            </div>          </div>
-          <div class="col">
-            <div style="text-align: left; margin-top: 40%;"> 
-            <h1 class="titulo3">¡Bienvenido!</h1>
-            <h3 class="titulo7"> En esta sección podes conectarte con otros fanaticos de Koino Yokan ♥</h3>
-          </div>
-          </div>
-     
-        </div>
-      </div>
-  </section>
 
-  <section class="divisor">
-    <h1 class="titulo6">Subi tu arte</h1>
-    <ul id="taskList"></ul>
-    <div>
-        <input type="text" id="newTask" placeholder="Nueva tarea" class="margenes">
-        <br>
-        <input type="file" id="taskImage" accept="image/*" class="margenes">
-        <br>
-        <button onclick="addTask()" class="botoncito9">Agregar Tarea</button>
-    </div>
-  </section>
 
-  <section class="form-container">
-    <form action="..." onsubmit="return enviarCorreo()" class="form">
-        <span class="heading">Contáctanos</span>
-        
+
+
+
+<div class="container text-center">
+  <div class="row align-items-center">
+    <div class="col">
+      <section class="arte">
+        <h1 class="titulo1">Subi tu arte</h1>
+        <ul id="taskList" class="lista" ></ul>
         <div>
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" aria-describedby="emailHelp" placeholder="Ingresa tu email" class="input">
+            <input type="text" id="newTask" placeholder="Nueva tarea" class="margenes">
+            <br>
+            <input type="file" id="taskImage" accept="image/*" class="margenes">
+            <br>
+            <button onclick="addTask()" class="botoncito9">Agregar Tarea</button>
         </div>
-        
-        <div>
-            <label for="nombreUsuario">Nombre</label>
-            <input type="text" id="nombreUsuario" placeholder="Nombre" class="input">
-        </div>
-        
-        <div>
-            <label for="apellidoUsuario">Apellido</label>
-            <input type="text" id="apellidoUsuario" placeholder="Apellido" class="input">
-        </div>
-        
-        <div>
-            <label for="mensajeUsuario">Ingrese su mensaje</label>
-            <textarea id="mensajeUsuario" rows="3" placeholder="Escribe tu mensaje aquí..." class="textarea"></textarea>
-        </div>
-        
-        <div class="button-container">
-            <button type="submit" class="send-button">Enviar</button>
-         
-        </div>
-    </form>
-</section>
+      </section>    </div>
 
-
-
+    <div class="col">
+      <section class="form-container">
+        <form action="..." onsubmit="return enviarCorreo()" class="form">
+            <span class="heading" style="">Contáctanos</span>
+            
+            <div>
+                <input type="email" id="email" aria-describedby="emailHelp" placeholder="Ingresa tu email" class="input">
+            </div>
+            
+            <div>
+                <input type="text" id="nombreUsuario" placeholder="Nombre" class="input">
+            </div>
+            
+            <div>
+                <input type="text" id="apellidoUsuario" placeholder="Apellido" class="input">
+            </div>
+            
+            <div>
+                <textarea id="mensajeUsuario" rows="3" placeholder="Escribe tu mensaje aquí..." class="textarea"></textarea>
+            </div>
+            
+            <div class="button-container">
+                <button type="submit" class="send-button">Enviar</button>
+             
+            </div>
+        </form>
+    </section>    </div>
+  </div>
+</div>
  
 
   <footer>

@@ -146,3 +146,21 @@ async function deleteTask(taskId) {
     }
 }
 
+// Función para mostrar las tareas en la página
+function displayTasks(tasks) {
+    const taskList = document.getElementById('taskList');
+    taskList.innerHTML = ''; 
+
+    tasks.forEach(task => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <img src="${task.image_url}" alt="Imagen" width="50">
+            <span>${task.task}</span>
+            <input type="checkbox" ${task.checked ? 'checked' : ''} onclick="toggleTask(${task.id})">
+            <button onclick="deleteTask(${task.id})" style="background: none; border: none; cursor: pointer;">
+                🗑️
+            </button>
+        `;
+        taskList.appendChild(li);
+    });
+}
