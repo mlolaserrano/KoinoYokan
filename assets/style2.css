@@ -10,10 +10,7 @@
     
 }
 
-p{
-    color: light-dark(#000000, #ffffff);
 
-}
 
 img {
     opacity: var(--image-opacity);
@@ -132,6 +129,8 @@ nav {
     }
 }
 
+
+
 /* Koini Header tipo presentacion*/
 
 .header {
@@ -214,6 +213,7 @@ nav {
     flex-wrap: nowrap; 
     gap: 10px; 
     justify-content: center; 
+    margin-top: 10px;
 }
 
 .botoncito2 {
@@ -221,18 +221,17 @@ nav {
     background-color: rgb(236, 193, 113);
     padding: 5px 5px;
     border: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
     font-size: 14px;
-    color: light-dark(#333b3c, #000000);
-    background-color: light-dark(#dac569, #4b4030);
+    color: light-dark(#333b3c, #ffffff);
+    background-color: light-dark(#dac569, #797979);
     margin: 0.5%;
 }
 
 .botoncito2:hover {
-    background-color: #D6AF00;
+    
     transform: scale(1.1);
-    color: light-dark(#333b3c, #000000);
-    background-color: light-dark(#D6AF00, #5e503c);
+    color: light-dark(#333b3c, #ffffff);
+    background-color: light-dark(#D6AF00, #a0734e);
 }
 
 
@@ -280,11 +279,11 @@ nav {
 
 
 
-.llamada {
-    font-size: 16px;
+i{
+    color: light-dark(#333b3c, #ffffff);
 
 
-}
+} 
 
 
 
@@ -374,6 +373,7 @@ color: #EDAA75;
     flex-wrap: wrap;
     justify-content: center;
     margin: 25px;
+    
 }
 
 
@@ -460,7 +460,7 @@ color: #EDAA75;
     color: light-dark(#333b3c, #000000);
     background-color: light-dark(#dac569, #4b4030);
     margin: 1%;
-    color:rgb(0, 0, 0);
+    color: light-dark(#333b3c, #dac569);
 }
 
 .botoncito6:hover {
@@ -583,15 +583,13 @@ background-color: #FFFFFF;
 
 
 .llamada1{
-color: #444444;
 font-style: italic;
-color: light-dark(#333b3c, #efefec);
-
+color: light-dark(rgb(121, 100, 91), #ffffff);
 }
 
 .botonajax{
     border-radius: 25px;
-    color: light-dark(#333b3c, #000000);
+    color: light-dark(#333b3c, #ffffff);
     background-color: light-dark(#dac569, #4b4030);    padding: 10px;
     margin: 1%;
     border: none;
@@ -657,6 +655,8 @@ color: light-dark(#333b3c, #efefec);
 .letra{
 column-count: 2;
 text-align: justify;
+color: light-dark(#333b3c, #ffffff);
+
 }
 
 .comunidadhtml{
