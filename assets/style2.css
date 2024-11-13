@@ -385,7 +385,7 @@ color: #EDAA75;
     border: none; 
     border-radius: 10px;
     max-width: 600px; 
-    background-color: #fff; 
+    background-color: light-dark(#fffdf6, #000000);
     overflow: hidden; 
     margin: 25px;
 
@@ -397,9 +397,9 @@ color: #EDAA75;
 
 /* Imagen del Producto */
 .custom-card img {
-    width: 50%; 
+    width: 20%; 
     height: auto; 
-    border-right: 1px solid #e0e0e0; 
+    background-color: light-dark(#fffdf6, #2c2c2c);
 }
 
 /* Contenido de la Tarjeta */
